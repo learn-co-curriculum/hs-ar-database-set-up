@@ -47,7 +47,7 @@ rake db:migrate
 + Type `tux` into your terminal to get your Sinatra console started (make sure you are in the root directory of your project file).
 + Once tux has started up type in `Tweet.all`.
 + `Tweet.all` should return this object `#<ActiveRecord::Relation []>` with an empty array, because you haven't created an tweets in the database.
-+ You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in separate arguments for username and status you pass in a hash with these attributes. Like this:
++ You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in two arguments for username and status, you pass one argument - a hash with these attributes. Like this:
 
 ```ruby 
 tweet = Tweet.new({:user => "Vanessa", :status => "Tweet!"})
