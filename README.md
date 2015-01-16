@@ -10,7 +10,11 @@ type: study guide
 No worries. Get your application set up with the Code Snippets from Ironboard then follow the steps below to set up your database and add a tweets table.
 
 + Go to your terminal and run `bundle install` to download your new gems.
-+ Run `rake db:create_migration NAME="create_tweets"` in your console to create the file that will hold all the instructions for creating your tweets table.
++ Then run 
+```
+rake db:create_migration NAME="create_tweets"
+``` 
+  to create the file that will hold all the instructions for creating your tweets table.
   * If you get an error message carefully check through all of your files and make sure you put the code snippets in the right place and there are no typos.
 + Migrations are timestamped instructions for your computer that lay out how to build (or modify) a database step by step. 
   * This is important because it allows new developers to join your team at any time, download your code and run the migrations to create a database. 
@@ -34,7 +38,7 @@ No worries. Get your application set up with the Code Snippets from Ironboard th
   * You can see that the `create_table` method that we are calling inside of `up` will create a table "tweets" with columns for username and status, and that these columns will hold data of the type string.
 + To run this `up` method and create the tweets, save your file and type this command into your terminal 
 ``` bash
-`rake db:migrate`
+rake db:migrate
 ```
 
 + You should now see a `schema.rb` file in your `db` directory with a `create_tweets` table.
