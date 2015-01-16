@@ -44,9 +44,9 @@ rake db:migrate
 + You should now see a `schema.rb` file in your `db` directory with a `create_tweets` table.
   * Always check this file after running a migration to see if your table was created properly.
 + Now that that have your database set up, let's add some data!
-+ Type in `tux` into your terminal to get your Sinatra console started (make sure you are in the root directory of your project file).
++ Type `tux` into your terminal to get your Sinatra console started (make sure you are in the root directory of your project file).
 + Once tux has started up type in `Tweet.all`.
-+ `Tweet.all` should return an `ActiveRecord::Relation []` object - an empty array - because you haven't created an tweets in the database.
++ `Tweet.all` should return this object `#<ActiveRecord::Relation []>` with an empty array, because you haven't created an tweets in the database.
 + You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in separate arguments for username and status you pass in a hash with these attributes. Like this:
 
 ```ruby 
