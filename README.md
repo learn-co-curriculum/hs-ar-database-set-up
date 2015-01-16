@@ -30,9 +30,13 @@ No worries. Get your application set up with the Code Snippets from Ironboard th
     drop_table :tweets
   end
 ```
-+ Defining `up` and `down` methods allows us to give explicit instructions for building the table (`up`) and tearing it down (`down`) in case we need to destroy data or make changes.
-  *  You can see that the `create_table` method that we are calling inside of `up` will create a table "tweets" with columns for username and status that will be stored as strings.
-+ To run this `up` and create the tweets save your file and type this command into your terminal `rake db:migrate`
++ Defining `up` and `down` methods allows us to give explicit instructions for building the table (`up`) and dropping it down (`down`) in case we need to destroy data or make changes.
+  * You can see that the `create_table` method that we are calling inside of `up` will create a table "tweets" with columns for username and status, and that these columns will hold data of the type string.
++ To run this `up` method and create the tweets, save your file and type this command into your terminal 
+``` bash
+`rake db:migrate`
+```
+
 + You should now see a `schema.rb` file in your `db` directory with a `create_tweets` table.
   * Always check this file after running a migration to see if your table was created properly.
 + Now that that have your database set up, let's add some data!
