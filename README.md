@@ -46,8 +46,14 @@ rake db:migrate
 + Now that that have your database set up, let's add some data!
 + Type `tux` into your terminal to get your Sinatra console started (make sure you are in the root directory of your project file).
 + Once tux has started up type in `Tweet.all`.
-+ `Tweet.all` should return this object `#<ActiveRecord::Relation []>` with an empty array, because you haven't created an tweets in the database.
-+ You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in two arguments for username and status, you pass one argument - a hash with these attributes. Like this:
++ When you type in `Tweet.all` you'll see a SQL statement like this appear in the terminal:
+```sql
+SELECT "tweets".* FROM "tweets"
+```
++ And this query should return an ActiveRecord object like this `#<ActiveRecord::Relation []>`
+  *  You don't have to memorize SQL statemebts, because ActiveRecord creates those queries for us, but check out the SQL Resources on Ironboard if you want to learn more about SQL .
++ We are returned an empty array, because we haven't created any tweets in the database yet.
++ You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in two arguments for username and status, you pass in one argument - a hash with these attributes. Like this:
 
 ```ruby 
 tweet = Tweet.new({:user => "Vanessa", :status => "Tweet!"})
@@ -55,8 +61,14 @@ tweet.save
 ```
 
 + The `tweet.save` is really important because that is the command that adds your new tweet instance to your database. If you don't say `tweet.save` your tweet won't be saved! 
-+ Go ahead and create a couple of more tweets then do `Tweet.all` to see them.
+  * You can see the SQL statement that adds our tweet to the database when we do tweet.save:
+  
+  ```sql
+  INSERT INTO "tweets" ("status", "user") VALUES (?, ?)  [["status", "Tweet!"], ["user", "Vanessa"]]  
+  ```
++ Go ahead and create a couple of more tweets then do `Tweet.all` again.
   *  You should now get and `ActiveRecord::Relation` object with an array holding all of the tweet objects you created. Something like this:
+
   ```bash
   #<ActiveRecord::Relation [#<Tweet id: 3, user: "Vanessa", status: "Tweet!">, #<Tweet id: 4, user: "Danny", status: "Tweet tweet tweet!">, #<Tweet id: 5, user: "Vanessa", status: "MOAR tweets!!!">]>
   ```
