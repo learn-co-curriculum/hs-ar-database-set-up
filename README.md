@@ -56,7 +56,10 @@ tweet.save
 
 + The `tweet.save` is really important because that is the command that adds your new tweet instance to your database. If you don't say `tweet.save` your tweet won't be saved! 
 + Go ahead and create a couple of more tweets then do `Tweet.all` to see them.
-  *  You should now get and `ActiveRecord::Relation` object with an array holding of all the tweet objects you created.
+  *  You should now get and `ActiveRecord::Relation` object with an array holding all of the tweet objects you created. Something like this:
+  ```ruby
+  #<ActiveRecord::Relation [#<Tweet id: 3, user: "Vanessa", status: "Tweet!">, #<Tweet id: 4, user: "Danny", status: "Tweet tweet tweet!">, #<Tweet id: 5, user: "Vanessa", status: "MOAR tweets!!!">]>
+  ```
 + Now let's see if your new tweets show up in the browser.
 + Type `exit` to get out of tux and then type `rackup` to start up your server. You should see your tweets at `localhost:9292/tweets`.
 + We need to make one final modification to the application to get our tweets form working.
