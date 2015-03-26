@@ -7,7 +7,7 @@ type: study guide
 
 ## Missed class?
 
-No worries. Get your application set up with the Code Snippets from Ironboard then follow the steps below to set up your database and add a tweets table.
+No worries. Get your application set up with the Code Snippets from Learn then follow the steps below to set up your database and add a tweets table.
 
 + Go to your terminal and run `bundle install` to download your new gems.
 + Then run 
@@ -51,7 +51,7 @@ rake db:migrate
 SELECT "tweets".* FROM "tweets"
 ```
 + And this query should return an ActiveRecord object like this `#<ActiveRecord::Relation []>`
-  *  You don't have to memorize SQL statemebts, because ActiveRecord creates those queries for us, but check out the SQL Resources on Ironboard if you want to learn more about SQL .
+  *  You don't have to memorize SQL statemebts, because ActiveRecord creates those queries for us, but check out the SQL Resources on Learn if you want to learn more about SQL .
 + We are returned an empty array, because we haven't created any tweets in the database yet.
 + You can create tweets in the database similar to how you would create an instance of a tweet, but instead of passing in two arguments for username and status, you pass in one argument - a hash with these attributes. Like this:
 
