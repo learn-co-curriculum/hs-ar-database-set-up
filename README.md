@@ -1,9 +1,4 @@
----
-tags: active record, kids, ruby, advanced, study guide, databases
-language: ruby
-level: 2
-type: study guide
----
+
 
 ## Missed class?
 
