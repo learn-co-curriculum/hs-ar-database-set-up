@@ -84,4 +84,4 @@ end
 + Stop and restart your server and then refresh `localhost:9292/tweets` and create some tweets! 
 
 
-<a href='https://learn.co/lessons/hs-ar-database-set-up' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-ar-database-set-up' title='Missed class?'>Missed class?</a> on Learn.co and start learning to code for free.</p>
